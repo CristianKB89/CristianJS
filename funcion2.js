@@ -7,3 +7,5 @@ function mostrar (num) {
 mostrar (numero + numero);
 mostrar (7);
 mostrar (numero);
+
+module.exports = mostrar;

@@ -1,11 +1,6 @@
-let numero = 5;
-
+let num = 0;
 function mostrar (num) {
 	console.log(num *2);
 }
-
-mostrar (numero + numero);
-mostrar (7);
-mostrar (numero);
 
 module.exports = mostrar;

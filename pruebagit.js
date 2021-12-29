@@ -1,3 +1,4 @@
+let parametro = 'Holaaaaaa!!';
 function imprimir (parametro){
     console.log(parametro);
 }

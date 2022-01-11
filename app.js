@@ -1,16 +1,17 @@
 const fs = require('fs');
 
 var archivoTareas = JSON.parse(fs.readFileSync("tareas.json", 'utf-8'));
-var arrayTareas = [];
-var tareas = [];
-
+let resultado = [];
 let estadoSolicitado = (estado) => {
-    let estadoMinusculas = estado.toLowerCase();
-    for (let i = 0; i < archivoTareas.length; i++){
+    /*     for (let i = 0; i < archivoTareas.length; i++){
         arrayTareas=archivoTareas[i];
-        arrayTareas.estado == estadoMinusculas ? tareas.push(arrayTareas): tareas;
-    }
-    return tareas;  
+        arrayTareas.estado == estado.toLowerCase() ? resultado.push(arrayTareas): resultado;
+    } */
+    
+    archivoTareas.map(function(lista){
+        return lista.estado == estado.toLowerCase() ? resultado.push(lista): resultado;
+    });
+    return resultado;  
 };
 
-console.log(estadoSolicitado('PenDientE'));
+console.log(estadoSolicitado('Terminada'));

@@ -1,5 +1,5 @@
 let deportista = {
-    energia: 100,
+  energia: 100,
   experiencia: 10,
   nombre: "Aimar",
   entrenarHoras: function (horas){

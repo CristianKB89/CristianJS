@@ -1,17 +1,37 @@
-const fs = require('fs');
+const archivoDeTareas = require('./funcionesDeTareas');
 
-var archivoTareas = JSON.parse(fs.readFileSync("tareas.json", 'utf-8'));
-let resultado = [];
-let estadoSolicitado = (estado) => {
-    /*     for (let i = 0; i < archivoTareas.length; i++){
-        arrayTareas=archivoTareas[i];
-        arrayTareas.estado == estado.toLowerCase() ? resultado.push(arrayTareas): resultado;
-    } */
-    
-    archivoTareas.map(function(lista){
-        return lista.estado == estado.toLowerCase() ? resultado.push(lista): resultado;
-    });
-    return resultado;  
-};
+let accion = process.argv[2];
+let tareas = archivoDeTareas.leerArchivo();
 
-console.log(estadoSolicitado('Terminada'));
+
+let callback = (tarea, index) => {
+    console.log((index + 1) +'. '+ tarea.titulo +' - ' + tarea.estado);
+}
+
+switch (accion){
+    case "Listar":
+        tareas.forEach(callback);
+    break;
+    case "Filtrar":
+        let estado = process.argv[3];
+        let filtradas = archivoDeTareas.filtrarPorEstado(estado);
+        filtradas.map(
+            (tarea, indice) => console.log(indice + "-" + tarea.titulo));
+    break;
+    case "Crear":
+        let titulo = process.argv[3];
+        let tarea = {
+            titulo: titulo,
+            estado: "pendiente"
+        }
+        archivoDeTareas.guardarTarea(tarea);
+    break;
+/*     case "Actualizar":
+        let indice = process.argv[3];
+        archivoDeTareas.filtrarPorIndice(indice);
+        
+    break; */
+    default :
+    console.log("No se realizar la operacion");
+}
+

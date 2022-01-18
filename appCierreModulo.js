@@ -77,4 +77,4 @@ let auto = {
     patente :'JJK116', 
     vendido: false
 }
-console.log(concesionaria.autosQuePuedeComprar(persona));
+console.log(concesionaria.venderAuto('JJK116'));

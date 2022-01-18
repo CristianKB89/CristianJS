@@ -28,7 +28,7 @@ let autos = [{
         color :'Blanco', 
         cuotas :14, 
         anio :2019, 
-        patente :'JJK116', 
+        patente :'JJK1161', 
         vendido: false
     }
 ];

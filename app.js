@@ -1,10 +1,8 @@
-const { actualizarTarea } = require('./funcionesDeTareas');
-const archivoDeTareas = require('./funcionesDeTareas');
+let archivoDeTareas = require('./funcionesDeTareas');
 
 let accion = process.argv[2];
+
 let tareas = archivoDeTareas.leerArchivo();
-
-
 let callback = (tarea, index) => {
     console.log((index + 1) +'. '+ tarea.titulo +' - ' + tarea.estado);
 }

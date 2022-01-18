@@ -34,6 +34,6 @@ switch (accion){
         console.log(process.argv);
     break;
     default :
-    console.log("No se realizar la operacion");
+    console.log("No se realizar la operacion!");
 }
 

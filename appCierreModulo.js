@@ -19,7 +19,7 @@ const concesionaria = {
         return autos.filter(function(lista){
             return lista.vendido == false;
         });
-   },
+   }, 
    autosNuevos: function(){
         let autosParaLaVenta = this.autosParaLaVenta();
         return autosParaLaVenta.filter(function(lista){

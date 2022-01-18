@@ -1,3 +1,4 @@
+const { actualizarTarea } = require('./funcionesDeTareas');
 const archivoDeTareas = require('./funcionesDeTareas');
 
 let accion = process.argv[2];
@@ -26,11 +27,12 @@ switch (accion){
         }
         archivoDeTareas.guardarTarea(tarea);
     break;
-/*     case "Actualizar":
+    case "Actualizar":
         let indice = process.argv[3];
-        archivoDeTareas.filtrarPorIndice(indice);
-        
-    break; */
+        let estadoU = process.argv[4];
+        archivoDeTareas.actualizarTarea(indice, estadoU);
+        console.log(process.argv);
+    break;
     default :
     console.log("No se realizar la operacion");
 }

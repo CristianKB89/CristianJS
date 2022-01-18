@@ -19,15 +19,13 @@ let archivoDeTareas = {
         let tareas = this.leerArchivo();
         tareas.push(tarea);
         this.escribirJSON(tareas);
-    }/* ,
-    filtrarPorIndice: function (indice){
+    },
+    actualizarTarea: function (indice, estadoU){
         let tareas = this.leerArchivo();
-        let tareasFiltradas = tareas.filter((tarea)=> {
-            return tarea.indice === tareas[indice];
-        });
-        return tareasFiltradas;
-    } */
+        let tarea = tareas[indice];
+        tarea.estado = estadoU;
+        this.escribirJSON(tareas);
+    }
 }
-
 
 module.exports = archivoDeTareas;

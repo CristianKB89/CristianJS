@@ -34,17 +34,14 @@ function agregarHttp(url) {
     return "http://" + url;
 }
 
-function contarURL(array){
-    return array.length;
-}
+
 
 function procesar(array,callback){
-  let urls = [];
-    for (let i=0; i< array.length; i++){
-        urls.push(callback(array[i]));
-    }
+    let urls = array.map(function(links){
+        return callback(links);
+    });
   return urls;
 }
 
-console.log(procesar(["www.google.com","www.yahoo.com"],contarURL))
+
 console.log(procesar(["www.google.com","www.yahoo.com"],agregarHttp))

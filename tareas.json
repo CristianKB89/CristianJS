@@ -1,0 +1,34 @@
+[
+ {
+  "titulo": "Repasar JS",
+  "estado": "pendiente"
+ },
+ {
+  "titulo": "Armar aplicación de Tareas",
+  "estado": "progreso"
+ },
+ {
+  "titulo": "Break",
+  "estado": "terminada"
+ },
+ {
+  "titulo": "Break2",
+  "estado": "terminada"
+ },
+ {
+  "titulo": "Armar aplicación de Tareas con .map",
+  "estado": "progreso"
+ },
+ {
+  "titulo": "Nueva Tarea",
+  "estado": "pendiente"
+ },
+ {
+  "titulo": "Tarea Pelos",
+  "estado": "pendiente"
+ },
+ {
+  "titulo": "Break",
+  "estado": "terminada"
+ }
+]
